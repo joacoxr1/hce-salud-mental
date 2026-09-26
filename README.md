@@ -83,8 +83,6 @@ Toda corrección deberá preservar la trazabilidad mediante:
 
 ## 3. Stack Tecnológico
 
-La elección de un stack acotado resulta suficiente para abordar el problema sin agregar tecnología innecesaria.
-
 | **Área** | **Tecnología** | **Uso** |
 |---|---|---|
 | **Backend** | Java | Lenguaje principal del sistema. |
@@ -93,14 +91,12 @@ La elección de un stack acotado resulta suficiente para abordar el problema sin
 | **Frontend** | HTML5 | Estructura de las interfaces. |
 | **Estilos** | CSS3 | Diseño y presentación de las interfaces. |
 | **Frontend** | JavaScript | Interactividad y comportamiento del cliente. |
-| **Framework CSS** | Bootstrap | Diseño responsive y componentes visuales. |
+| **Framework CSS** | Tailwind CSS | Diseño responsive ágil mediante clases de utilidad. |
 | **Motor de plantillas** | Thymeleaf | Generación de vistas dinámicas desde Spring Boot. |
 | **Seguridad** | Spring Security | Autenticación y autorización basada en roles. |
 | **Despliegue** | Render | Despliegue de la aplicación mediante PaaS. |
 
 ### Seguridad
-
-El sistema contemplará:
 
 - Autenticación de usuarios.
 - Autorización mediante roles.
@@ -111,7 +107,7 @@ El sistema contemplará:
 
 ### Base de datos
 
-Se utilizará **MySQL**, debido a la necesidad de mantener relaciones e integridad entre las principales entidades del sistema:
+Se utilizará MySQL para almacenar la información del sistema y mantener las relaciones entre las principales entidades:
 
 - Pacientes.
 - Internaciones.
@@ -205,7 +201,6 @@ El proyecto se gestionará mediante Scrum, dividiendo el desarrollo en distintos
 
 ## 6. Recorrido General del Sistema
 
-Una vez finalizados los sprints, el recorrido principal del sistema será:
 
     ┌───────────────┐
     │     Login     │

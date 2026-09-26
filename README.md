@@ -135,69 +135,91 @@ Se utilizará MySQL para almacenar la información del sistema y mantener las re
 
 ## 5. Organización de Sprints
 
-El proyecto se gestionará mediante Scrum, dividiendo el desarrollo en distintos sprints. Cada sprint tendrá objetivos y funcionalidades definidos, permitiendo organizar el desarrollo de forma progresiva y avanzar desde las funcionalidades iniciales del sistema hasta completar sus principales módulos.
+El proyecto se gestionará mediante Scrum, dividiendo el desarrollo en distintos sprints. Cada sprint tendrá objetivos y funcionalidades definidos, permitiendo organizar el desarrollo de forma progresiva e incorporar nuevas funcionalidades sobre la versión existente del sistema.
 
+### Sprint 1 — Gestión de Pacientes e Internaciones
 
-### Sprint 1 — Admisión e Internación
+#### Backend
 
-**Recorrido:**
+- Configuración inicial de Spring Boot.
+- Organización de la estructura del proyecto.
+- Implementación de las entidades `Paciente` e `Internacion`.
+- Implementación de repositorios, servicios y controladores.
+- Desarrollo de las operaciones para registrar y consultar pacientes e internaciones.
 
-    Login
-      ↓
-    Paciente
-      ↓
-    Apertura de internación
-      ↓
-    Consulta
+#### Base de datos
 
-#### Objetivos
+- Configuración de MySQL.
+- Creación de las tablas correspondientes a pacientes e internaciones.
+- Definición de las relaciones entre ambas entidades.
 
-- Implementar el inicio de sesión.
-- Registrar y consultar pacientes.
-- Permitir la apertura de una internación.
-- Relacionar correctamente el paciente con su internación.
-- Consultar la información registrada desde la interfaz.
-- Persistir los datos en MySQL.
+#### Frontend
+
+- Estructura inicial de las vistas utilizando HTML, CSS, Tailwind CSS y Thymeleaf.
+- Implementación del inicio de sesión.
+- Pantallas para registrar y consultar pacientes.
+- Pantallas para abrir y consultar internaciones.
+
+#### Seguridad y testing
+
+- Configuración inicial de Spring Security.
+- Implementación de la autenticación de usuarios.
+- Pruebas de registro, consulta y persistencia de pacientes e internaciones.
 
 ### Sprint 2 — Evolución y Tratamiento
 
-**Recorrido:**
+#### Backend
 
-    Profesional
-      ↓
-    Evolución
-      ↓
-    Medicación
-      ↓
-    Permisos
+- Implementación de las entidades `Profesional`, `Evolucion` y `Medicacion`.
+- Implementación de repositorios, servicios y controladores correspondientes.
+- Definición de las relaciones entre internaciones, profesionales, evoluciones y medicaciones.
+- Implementación de las reglas de negocio para el registro de evoluciones y tratamientos.
 
-#### Objetivos
+#### Base de datos
 
-- Incorporar la gestión de profesionales.
-- Implementar el registro de evoluciones.
-- Registrar la medicación correspondiente.
-- Aplicar permisos según el rol del profesional.
-- Mantener la trazabilidad de las evoluciones.
-- Registrar autor y fecha/hora de cada acción.
+- Incorporación de las nuevas tablas y relaciones.
+- Definición de claves y restricciones necesarias para mantener la integridad de los datos.
 
-### Sprint 3 — Historial y Egreso
+#### Frontend
 
-**Recorrido:**
+- Implementación de las vistas para registrar y consultar evoluciones.
+- Implementación de las vistas para gestionar medicación.
+- Integración de las nuevas funcionalidades con las desarrolladas en el Sprint 1.
 
-    Antecedentes
-      ↓
-    Egreso
-      ↓
-    Auditoría
+#### Seguridad y testing
 
-#### Objetivos
+- Configuración de permisos según el rol del profesional.
+- Registro del autor y fecha/hora de las evoluciones.
+- Pruebas de las nuevas funcionalidades y su integración con las existentes.
 
-- Incorporar la consulta de antecedentes.
-- Permitir la consulta histórica de internaciones.
-- Implementar el proceso de egreso.
-- Registrar las acciones relevantes en una auditoría.
-- Preservar la trazabilidad de las modificaciones.
-- Completar el recorrido clínico principal.
+### Sprint 3 — Historial, Egreso y Auditoría
+
+#### Backend
+
+- Implementación de las funcionalidades para consultar antecedentes e internaciones anteriores.
+- Desarrollo del proceso de egreso.
+- Implementación de los registros de auditoría.
+- Incorporación de los mecanismos necesarios para preservar la trazabilidad de las modificaciones.
+- Integración de las nuevas funcionalidades con las desarrolladas anteriormente.
+
+#### Base de datos
+
+- Incorporación de las entidades y relaciones necesarias para antecedentes, egresos y auditoría.
+- Implementación de los campos necesarios para registrar fecha, hora y usuario asociado a las operaciones.
+- Revisión de la integridad de las relaciones entre las entidades.
+
+#### Frontend
+
+- Implementación de las vistas para consultar antecedentes e internaciones anteriores.
+- Implementación de la pantalla para registrar el egreso.
+- Visualización de la información histórica y de las acciones registradas.
+
+#### Seguridad y testing
+
+- Revisión de los permisos de acceso a la información clínica.
+- Pruebas de trazabilidad y auditoría.
+- Pruebas de integración del recorrido completo del sistema.
+- Correcciones y ajustes finales sobre las funcionalidades desarrolladas.
 
 ## 6. Recorrido General del Sistema
 

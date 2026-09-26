@@ -137,7 +137,6 @@ Se utilizará MySQL para almacenar la información del sistema y mantener las re
 
 El proyecto se gestionará mediante Scrum, dividiendo el desarrollo en distintos sprints. Cada sprint tendrá objetivos y funcionalidades definidos, permitiendo organizar el desarrollo de forma progresiva e incorporar nuevas funcionalidades sobre la versión existente del sistema.
 
-
 ### Sprint 1 — Gestión de Pacientes e Internaciones
 
 #### Backend

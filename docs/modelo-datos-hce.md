@@ -154,8 +154,7 @@ internaciones). `INTERNACION` es cada episodio: guarda tanto el paso por guardia
 pabellón (`id_profesional_tratante`, `fecha_ingreso_pabellon`). Un mismo paciente puede tener
 N internaciones (`es_reingreso` lo marca, pero se puede derivar comparando cuántas
 internaciones previas tiene el paciente). Todo lo demás (diagnósticos, medicación, evoluciones,
-permisos, egreso) cuelga de la internación, no del paciente directamente — así se resuelve
-"consultar internaciones anteriores" simplemente recorriendo `Paciente → Internaciones`.
+permisos, egreso) cuelga de la internación, no del paciente directamente.
 
 **Nunca DELETE, todo versionado.** `DIAGNOSTICO` e `INDICACION_MEDICA` tienen
 `id_..._anterior` y un flag de vigencia/estado. Modificar un diagnóstico o una indicación de
@@ -176,7 +175,8 @@ esa consulta genera (opcionalmente) una `INDICACION_MEDICA` con `origen = CONSUL
 así queda claro en la auditoría que esa indicación no vino del circuito habitual del profesional
 tratante.
 
-**Egreso como entidad separada.** Podría ser solo un campo de fecha en `INTERNACION`,  pero se lo modeló como entidad con su propio autor, fecha y resumen — fuerza a que el equipo diseñe explícitamente esa pantalla/flujo en vez de dejarlo como un campo suelto. De esta manera se detallaría el cierre de la internación.
+**Egreso como entidad separada.** Podría ser solo un campo de fecha en `INTERNACION`,  pero se lo modeló como entidad con su propio autor, fecha y resumen.
+De esta manera se detallaría el cierre de la internación.
 
 **Administración de medicación separada de la indicación.** `INDICACION_MEDICA` es lo que el
 profesional ordena; `ADMINISTRACION_MEDICACION` es lo que enfermería efectivamente

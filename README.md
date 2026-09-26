@@ -26,9 +26,10 @@ La propuesta consiste en desarrollar una plataforma para gestionar la informaci�
 
 ## 2. Dominio y Alcance (Proceso Clínico)
 
-A partir del relevamiento real, el sistema distingue claramente al **paciente** de la **internación**.
+En el relevamiento, el sistema distingue  **paciente** de la **internación**.
 
-Un mismo paciente puede internarse más de una vez. Por lo tanto, la estructura de datos conservará la trazabilidad:
+Un mismo paciente puede internarse más de una vez. Cada internación se registra de forma independiente, manteniendo la relación con el paciente:
+
 
     Paciente
        ├── Internación 1

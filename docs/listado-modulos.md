@@ -1,7 +1,5 @@
 # Listado de Módulos — HCE Pabellón de Salud Mental
 
-## P0 — Imprescindibles para el MVP
-
 | # | Módulo | Descripción breve | Sprint |
 |---|---|---|---|
 | 1 | **Autenticación y roles** | Login, gestión de usuarios/profesionales, control de acceso por rol (médico de guardia, profesional tratante, enfermería). Transversal a todo el sistema. | 1 |
